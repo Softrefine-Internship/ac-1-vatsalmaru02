@@ -1,0 +1,108 @@
+.option-btn {
+  @include button-reset;
+  height: 1.2rem;
+  width: 0.4rem;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    height: 0.4rem;
+    width: 0.4rem;
+    border-radius: $border-radius-round;
+    background-color: $color-primary;
+    position: absolute;
+    transition: all $transition-fast;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      background-color: $color-tertiary;
+    }
+  }
+}
+
+.add-btn {
+  @include button-reset;
+  @include flex-center;
+
+  &__icon {
+    height: 2.2rem;
+    width: 2.2rem;
+  }
+}
+
+.star-btn {
+  &__label {
+    cursor: pointer;
+    @include flex-center;
+  }
+
+  &__icon {
+    height: 1.6rem;
+    width: 1.6rem;
+    stroke: $color-secondary;
+    transition: all $transition-fast;
+  }
+
+  &__label:hover &__icon {
+    stroke: $color-primary;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + &__label > &__icon {
+      fill: $color-primary;
+      stroke: $color-primary;
+    }
+  }
+}
+
+.view {
+  justify-self: end;
+  @include flex-center;
+  gap: $spacing-md;
+
+  &__list,
+  &__grid {
+    @include button-reset;
+  }
+
+  &__list__icon,
+  &__grid__icon {
+    height: 1.8rem;
+    width: 1.8rem;
+    stroke: $color-primary;
+    transition: all $transition-fast ease-in-out;
+  }
+
+  &__list:hover &__list__icon,
+  &__grid:hover &__list__icon,
+  &__list:hover &__grid__icon,
+  &__grid:hover &__grid__icon {
+    stroke: $color-border;
+  }
+
+  @include respond-to(desktop-small) {
+    grid-column: 1/-1;
+  }
+
+  @include respond-to(tablet-landscape) {
+    grid-column: 2/-1;
+  }
+
+  @include respond-to(phone) {
+    grid-column: 1/-1;
+  }
+}

@@ -1,0 +1,54 @@
+.messages {
+  display: grid;
+  grid-template-rows: auto 1fr;
+
+  &__header {
+    padding: $spacing-xl $spacing-lg 1.2rem;
+    border-bottom: 1px solid $color-tertiary;
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+
+    @include respond-to(tablet-portrait) {
+      padding: 1.2rem $spacing-lg;
+    }
+  }
+
+  &__search {
+    margin-left: auto;
+    @include button-reset;
+    @include flex-center;
+
+    &__icon {
+      height: $spacing-md;
+      width: $spacing-md;
+      stroke: $color-primary;
+      transition: all $transition-fast;
+
+      &:hover {
+        stroke: $color-tertiary;
+      }
+    }
+  }
+
+  &__chat-box {
+    align-self: start;
+    max-height: 80vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: 0;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include respond-to(tablet-portrait) {
+    max-height: 38vh;
+    padding-right: 0;
+  }
+
+}
+
+

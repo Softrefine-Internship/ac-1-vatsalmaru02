@@ -1,0 +1,9 @@
+.container {
+  background-color: $color-background;
+  height: 100vh;
+  height: 100dvh;
+  display: grid;
+  grid-template-columns: auto 3fr 2fr;
+  grid-template-rows: auto 1fr;
+  align-items: start;
+}

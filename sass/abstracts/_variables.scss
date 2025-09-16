@@ -1,0 +1,80 @@
+// Colors
+$color-primary: #151522;
+$color-primary-light: #444;
+$color-secondary: #777;
+$color-tertiary: #999;
+$color-white: #fff;
+$color-background: #f3f6fd;
+$color-border: #bbb;
+$color-border-light: #bcc1d8;
+$color-error: #f00;
+
+// Project colors
+$color-project-1: #dbf6fd;
+$color-project-1-accent: #2bc8ff;
+$color-project-2: #fde5cc;
+$color-project-2-accent: #ff723a;
+$color-project-3: #b4f1ce;
+$color-project-3-accent: #02d052;
+$color-project-4: #ffd3e2;
+$color-project-4-accent: #ff72ac;
+$color-project-5: #e9e7fd;
+$color-project-5-accent: #a2a1b0;
+$color-project-6: #fff0d3;
+$color-project-6-accent: #a07d5e;
+
+// Typography
+$font-primary: "Poppins", sans-serif;
+$font-secondary: "Geologica", sans-serif;
+
+// Font sizes
+$font-size-small: 1rem;
+$font-size-normal: 1.2rem;
+$font-size-medium: 1.4rem;
+$font-size-large: 1.6rem;
+$font-size-xl: 1.8rem;
+$font-size-xxl: 2.4rem;
+
+// Font weights
+$font-weight-light: 200;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Spacing
+$spacing-xs: 0.4rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.6rem;
+$spacing-lg: 2.4rem;
+$spacing-xl: 3.2rem;
+$spacing-xxl: 4rem;
+
+// Border radius
+$border-radius-small: 1rem;
+$border-radius-medium: 1.6rem;
+$border-radius-large: 3.2rem;
+$border-radius-round: 50%;
+$border-radius-pill: 100px;
+
+// Breakpoints
+$bp-phone: 21.25em;
+$bp-phone-large: 26.25em;
+$bp-tablet-portrait: 37.5em;
+$bp-tablet-landscape: 49em;
+$bp-desktop-small: 56.25em;
+$bp-desktop: 75em;
+$bp-desktop-large: 112.5em;
+
+// Shadows
+$shadow-light: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+$shadow-medium: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+$shadow-dark: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
+
+// Transitions
+$transition-fast: 0.2s;
+$transition-medium: 0.3s;
+
+// Z-index
+$z-index-tooltip: 10;
+$z-index-modal: 100;

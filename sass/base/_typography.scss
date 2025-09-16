@@ -1,0 +1,21 @@
+body {
+  font-family: $font-primary;
+  font-weight: $font-weight-normal;
+  line-height: 1.7;
+}
+
+.heading-primary {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-semibold;
+  letter-spacing: -0.5px;
+
+  @include respond-to(phone-large) {
+    font-size: 2rem;
+  }
+}
+
+.heading-secondary {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  color: $color-primary-light;
+}

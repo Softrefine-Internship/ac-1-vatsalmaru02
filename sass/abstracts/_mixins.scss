@@ -1,0 +1,130 @@
+// Media query mixins
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: $bp-phone) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone-large {
+    @media only screen and (max-width: $bp-phone-large) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet-portrait {
+    @media only screen and (max-width: $bp-tablet-portrait) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet-landscape {
+    @media only screen and (max-width: $bp-tablet-landscape) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop-small {
+    @media only screen and (max-width: $bp-desktop-small) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media only screen and (max-width: $bp-desktop) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop-large {
+    @media only screen and (min-width: $bp-desktop-large) {
+      @content;
+    }
+  }
+}
+
+// Flexbox mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Button reset mixin
+@mixin button-reset {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+// Icon hover mixin
+@mixin icon-hover($color: $color-tertiary) {
+  transition: all $transition-fast;
+
+  &:hover {
+    stroke: $color;
+    fill: $color;
+  }
+}
+
+// Scrollbar mixin
+@mixin custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+    margin: 2rem 0;
+    background-color: transparent;
+    transition: all $transition-fast;
+  }
+
+  &::-webkit-scrollbar-track {
+    margin: 0.5rem;
+    background-color: transparent;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: $color-border;
+
+    &:hover {
+      background: $color-secondary;
+    }
+  }
+}
+
+// Project color generator mixin
+@mixin project-colors($bg-color, $accent-color) {
+  background-color: $bg-color;
+
+  .progress-bar::-webkit-progress-value {
+    background-color: $accent-color;
+  }
+
+  .add-btn__icon {
+    fill: $accent-color;
+
+    &:hover {
+      stroke: $accent-color;
+      fill: $bg-color;
+    }
+  }
+
+  .project__time-left-tag {
+    color: $accent-color;
+  }
+
+  &::before,
+  &::after {
+    background-color: $bg-color;
+  }
+
+  &.project--active {
+    .project__time-left-tag {
+      background-color: $bg-color;
+    }
+
+    &::before,
+    &::after {
+      background-color: $accent-color;
+    }
+  }
+}

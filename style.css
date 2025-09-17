@@ -752,7 +752,7 @@ body {
   transform: translate(-50%, 1.6rem);
 }
 .project:nth-child(1) {
-  background-color: #dbf6fd;
+  background-color: rgba(254, 236, 236, 0.2274509804);
 }
 .project:nth-child(1) .progress-bar::-webkit-progress-value {
   background-color: #2bc8ff;
@@ -762,16 +762,16 @@ body {
 }
 .project:nth-child(1) .add-btn__icon:hover {
   stroke: #2bc8ff;
-  fill: #dbf6fd;
+  fill: rgba(254, 236, 236, 0.2274509804);
 }
 .project:nth-child(1) .project__time-left-tag {
   color: #2bc8ff;
 }
 .project:nth-child(1)::before, .project:nth-child(1)::after {
-  background-color: #dbf6fd;
+  background-color: rgba(254, 236, 236, 0.2274509804);
 }
 .project:nth-child(1).project--active .project__time-left-tag {
-  background-color: #dbf6fd;
+  background-color: rgba(254, 236, 236, 0.2274509804);
 }
 .project:nth-child(1).project--active::before, .project:nth-child(1).project--active::after {
   background-color: #2bc8ff;

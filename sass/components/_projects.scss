@@ -237,7 +237,7 @@
   }
 
   &:nth-child(1) {
-    @include project-colors($color-project-1, $color-project-1-accent);
+    @include project-colors(#feecec3a, $color-project-1-accent);
   }
 
   &:nth-child(2) {

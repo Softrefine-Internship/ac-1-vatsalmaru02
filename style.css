@@ -240,6 +240,7 @@ body {
   border: none;
   background-color: #fff;
   transition: box-shadow 0.2s;
+  cursor: pointer;
 }
 .search__label {
   cursor: pointer;
@@ -251,6 +252,7 @@ body {
   border: 1px solid #999;
   border-radius: 50%;
   position: relative;
+  cursor: pointer;
 }
 .search__icon::after {
   content: "";

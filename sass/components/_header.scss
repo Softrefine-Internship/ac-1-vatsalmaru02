@@ -80,6 +80,7 @@
   border: none;
   background-color: $color-white;
   transition: box-shadow $transition-fast;
+  cursor: pointer;
 
   &__label {
     cursor: pointer;
@@ -92,6 +93,7 @@
     border: 1px solid $color-tertiary;
     border-radius: $border-radius-round;
     position: relative;
+    cursor: pointer;
 
     &::after {
       content: "";

@@ -622,7 +622,7 @@ body {
 
 .project-container {
   align-self: start;
-  max-height: 69vh;
+  max-height: 72vh;
   overflow-y: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -640,12 +640,9 @@ body {
   margin: 0.5rem;
   background-color: transparent;
 }
-.project-container:hover::-webkit-scrollbar-thumb {
+.project-container::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: #bbb;
-}
-.project-container:hover::-webkit-scrollbar-thumb:hover {
-  background: #777;
 }
 @media only screen and (max-width: 75em) {
   .project-container {
@@ -673,6 +670,12 @@ body {
 .project {
   border-radius: 3.2rem;
   position: relative;
+  cursor: pointer;
+}
+.project:hover {
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease-in-out;
+  transform: scale(1);
 }
 .project__header, .project__footer {
   display: flex;
@@ -690,7 +693,7 @@ body {
   padding: 1rem 2.4rem;
 }
 .project__date {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #444;
 }
@@ -896,16 +899,6 @@ body {
 .project:nth-child(6).project--active::before, .project:nth-child(6).project--active::after {
   background-color: #a07d5e;
 }
-.project--active {
-  background-color: #fff;
-  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
-}
-.project--active .progress-bar::-webkit-progress-bar {
-  background-color: #ebebeb;
-}
-.project--active .project__footer {
-  border-top: 1px solid #e9e7fd;
-}
 
 .progress-text,
 .progress-percentage {
@@ -936,8 +929,8 @@ body {
   grid-template-rows: auto 1fr;
 }
 .messages__header {
-  padding: 3.2rem 2.4rem 1.2rem;
-  border-bottom: 1px solid #999;
+  padding: 3.2rem 3.4rem 1.2rem;
+  border-bottom: 1px solid #dee0ec;
   display: flex;
   align-items: center;
   gap: 1.6rem;
@@ -974,7 +967,18 @@ body {
   scrollbar-width: 0;
 }
 .messages__chat-box::-webkit-scrollbar {
-  display: none;
+  width: 0.4rem;
+  margin: 2rem 0;
+  background-color: transparent;
+  transition: all 0.2s;
+}
+.messages__chat-box::-webkit-scrollbar-track {
+  margin: 0.5rem;
+  background-color: transparent;
+}
+.messages__chat-box::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #bbb;
 }
 @media only screen and (max-width: 37.5em) {
   .messages__chat-box {
@@ -992,7 +996,7 @@ body {
   transition: all 0.3s ease-in;
 }
 .message:not(:first-child) {
-  border-top: 1px solid #bcc1d8;
+  border-top: 1px solid #dee0ec;
 }
 .message:hover {
   background-color: #fff;
@@ -1001,11 +1005,12 @@ body {
   border-radius: 12px;
   padding-left: 1.2rem;
   margin-left: 1.2rem;
-  transform: translateY(-2px);
+  transform: scale(1);
+  cursor: pointer;
 }
 @media only screen and (max-width: 37.5em) {
   .message:hover {
-    transform: translateY(-1px);
+    transform: scale(1);
     padding: 1.6rem 1.2rem;
     margin: 0 1.2rem;
   }
@@ -1030,6 +1035,7 @@ body {
 .message__text {
   grid-column: 2/4;
   color: #444;
+  font-size: 1.4rem;
 }
 @media only screen and (max-width: 37.5em) {
   .message__text {

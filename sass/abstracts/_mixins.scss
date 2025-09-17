@@ -81,13 +81,9 @@
     background-color: transparent;
   }
 
-  &:hover::-webkit-scrollbar-thumb {
+  &::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: $color-border;
-
-    &:hover {
-      background: $color-secondary;
-    }
   }
 }
 

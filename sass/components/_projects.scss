@@ -107,7 +107,7 @@
 
 .project-container {
   align-self: start;
-  max-height: 69vh;
+  max-height: 72vh;
   overflow-y: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -123,7 +123,7 @@
 
   @include respond-to(desktop-small) {
     grid-template-columns: repeat(1, 1fr);
-    // max-height: 56vh;
+    // max-height: 70vh;
   }
 
   @include respond-to(tablet-portrait) {
@@ -140,6 +140,13 @@
 .project {
   border-radius: $border-radius-large;
   position: relative;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: $shadow-dark;
+    transition: all $transition-fast ease-in-out;
+    transform: scale(1)
+  }
 
   &__header,
   &__footer {
@@ -160,7 +167,7 @@
   }
 
   &__date {
-    font-size: $font-size-medium;
+    font-size: $font-size-normal;
     font-weight: $font-weight-semibold;
     color: $color-primary-light;
   }
@@ -229,7 +236,6 @@
     }
   }
 
-  // Project color variations
   &:nth-child(1) {
     @include project-colors($color-project-1, $color-project-1-accent);
   }
@@ -252,19 +258,6 @@
 
   &:nth-child(6) {
     @include project-colors($color-project-6, $color-project-6-accent);
-  }
-
-  &--active {
-    background-color: $color-white;
-    box-shadow: $shadow-dark;
-
-    .progress-bar::-webkit-progress-bar {
-      background-color: #ebebeb;
-    }
-
-    .project__footer {
-      border-top: 1px solid $color-project-5;
-    }
   }
 }
 

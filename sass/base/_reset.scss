@@ -1,14 +1,30 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Poppins", sans-serif;
-    background-color: #E9E7FD;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
+
+  @include respond-to(desktop) {
+    font-size: 56.25%;
+  }
+
+  @include respond-to(desktop-small) {
+    font-size: 50%;
+  }
+
+  @include respond-to(desktop-large) {
+    font-size: 75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
 }

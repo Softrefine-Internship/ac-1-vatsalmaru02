@@ -35,8 +35,7 @@
       transition: all $transition-fast ease-in-out;
     }
 
-    &:hover,
-    &:active {
+    &:hover {
       background-color: $color-primary;
 
       .navigation__icon {
@@ -56,7 +55,7 @@
   }
 
   &__item {
-    &.active &__link {
+    &.active,&__link {
       &:link,
       &:visited {
         background-color: $color-primary;
@@ -95,5 +94,15 @@
 
   @include respond-to(phone-large) {
     transform: translateY(5rem);
+  }
+}
+
+.active {
+  background-color: $color-primary;
+  border-radius: $border-radius-round;
+  .navigation__icon {
+    stroke: $color-white;
+    fill: $color-primary;
+    transform: scale(1.1);
   }
 }

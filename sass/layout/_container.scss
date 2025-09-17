@@ -6,4 +6,17 @@
   grid-template-columns: auto 3fr 2fr;
   grid-template-rows: auto 1fr;
   align-items: start;
+
+  @include respond-to(desktop) {
+    grid-template-columns: auto 2fr 1fr;
+  }
+
+  @include respond-to(desktop-small) {
+    grid-template-columns: auto 1fr 1fr;
+  }
+
+  @include respond-to(tablet-portrait) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr 1fr;
+  }
 }

@@ -119,12 +119,12 @@
 
   @include respond-to(desktop) {
     grid-template-columns: repeat(2, 1fr);
-    max-height: 64vh;
+    // max-height: 64vh;
   }
 
   @include respond-to(desktop-small) {
     grid-template-columns: repeat(1, 1fr);
-    max-height: 56vh;
+    // max-height: 56vh;
   }
 
   @include respond-to(tablet-portrait) {

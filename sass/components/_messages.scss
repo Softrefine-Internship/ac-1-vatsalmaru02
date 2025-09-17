@@ -33,22 +33,111 @@
 
   &__chat-box {
     align-self: start;
-    max-height: 80vh;
+    max-height: 79vh;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     scrollbar-width: 0;
-  }
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
-  @include respond-to(tablet-portrait) {
-    max-height: 38vh;
-    padding-right: 0;
+    @include respond-to(tablet-portrait) {
+      max-height: 38vh;
+      padding-right: 0;
+    }
   }
-
 }
 
+.message {
+  padding: $spacing-md $spacing-lg;
+  display: grid;
+  grid-template-columns: 4rem 1fr auto;
+  align-items: center;
+  column-gap: $spacing-md;
+  transition: all $transition-medium ease-in;
 
+  &:not(:first-child) {
+    border-top: 1px solid $color-border-light;
+  }
+
+  &:hover {
+    background-color: $color-white;
+    box-shadow: $shadow-medium;
+    border-top-color: transparent;
+    border-radius: 12px;
+    padding-left: 1.2rem;
+    margin-left: 1.2rem;
+    transform: translateY(-2px);
+
+    @include respond-to(tablet-portrait) {
+      transform: translateY(-1px);
+      padding: $spacing-md 1.2rem;
+      margin: 0 1.2rem;
+    }
+
+    + .message {
+      border-top-color: transparent;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 2rem;
+  }
+
+  &__img {
+    grid-row: 1/4;
+    height: 4rem;
+    width: 4rem;
+    border-radius: $border-radius-round;
+  }
+
+  &__name {
+    font-size: $font-size-large;
+    font-weight: $font-weight-semibold;
+    color: $color-primary-light;
+  }
+
+  &__text {
+    grid-column: 2/4;
+    color: $color-primary-light;
+
+    @include respond-to(tablet-portrait) {
+      font-size: $font-size-normal;
+    }
+  }
+
+  &__date {
+    grid-column: 2/4;
+    justify-self: end;
+    color: $color-secondary;
+  }
+
+  .star-btn {
+    justify-self: end;
+
+    &__input {
+      display: none;
+
+      &:checked + .star-btn__label .star-btn__icon {
+        fill: #000;
+        stroke: #000;
+      }
+    }
+
+    &__label {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    &__icon {
+      width: 2rem;
+      height: 2rem;
+      fill: none;
+      stroke: $color-primary-light;
+      transition: fill 0.2s, stroke 0.2s;
+    }
+  }
+}
